@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  :root {
+    --primary-color: #000;
+    --secondary-color: #e2e3ec;
+    
+  }
+  
+  html {
+    transition: all 0.5s ease-in;
+  }
+  
+  html.dark {
+    --primary-color: #61b0f6;
+    --secondary-color: #333;
+    align-items: center;
+    
+  }
+  
+  html.dark {
+    background-color: #000000;
+    color: var(--primary-color);
+  }
+  
+  
+  
+  
+  body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  
+  .toggle {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 20px;
+    padding: 14px 18px;
+    position: absolute;
+    top: 60px;
+  }
+  
+  .toggle:focus {
+    outline: none;
+  }
+  
+  .clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .clock {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #ffce2f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .needle {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+  }
+  
+  .needle.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 120px;
+  }
+  
+  .needle.minute {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 150px;
+  }
+  
+  .needle.second {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 180px;
+    background-color: #d7301d;
+  }
+  
+  .center-point {
+    background-color: #e54b3a;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .center-point::after {
+    content: '';
+    background-color: var(--primary-color);
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+  }
+  
+  .time {
+    font-size: 70px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .date {
+    color: #855f5f;
+    font-size: 30px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  
+  .date .circle {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 10%;
+    height: 30px;
+    width: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 30px;
+    transition: all 0.5s ease-in;
+    font-size: 20px;
+  }
+  
